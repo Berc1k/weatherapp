@@ -1,0 +1,18 @@
+services:
+  database:
+    build: ./db
+    ports:
+      - "5432:5432"
+    volumes:
+      - ./db/data:/var/lib/postgresql/data
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+  server:
+    build: ./server/src
+    ports:
+      - "8080:8080"
+  app:
+    build: ./app
+    ports:
+      - "5173:5173"
