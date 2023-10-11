@@ -1,8 +1,10 @@
 FROM node:latest
 WORKDIR /server
-COPY package*.json tsconfig.json ./
+RUN npm install nodemon
+COPY package*.json tsconfig.json nodemon.json ./
 RUN npm install
-COPY ./src ./src
+
+# COPY ./src ./src
 
 EXPOSE 8080
-CMD ["npm","start"]
+CMD ["npm","run", "dev"]

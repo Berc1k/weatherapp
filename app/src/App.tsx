@@ -1,7 +1,7 @@
 import "./App.css";
 
 function App() {
-  return <div>SHOP UI</div>;
+  return <div>still works</div>;
 }
 
 export default App;

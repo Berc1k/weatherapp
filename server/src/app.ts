@@ -4,8 +4,8 @@ import express, { Request, Response } from "express";
 
 const app = express();
 app.use(express.json());
-
-// register routes
+console.log("elo");
+// register route
 
 app.get("/users", function (req: Request, res: Response) {
   // here we will have logic to return all users
