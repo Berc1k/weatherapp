@@ -1,29 +1,28 @@
 import React from "react";
-import "./style.scss";
 import { StyleSizes } from "../../types/styles";
 
 type Props = {
   children: string;
-  OnClick: React.MouseEventHandler<HTMLButtonElement>;
+  onClick: React.MouseEventHandler<HTMLButtonElement>;
   size: StyleSizes;
 };
 
-function checkSize(size: string) {
+function getSize(size: StyleSizes) {
   switch (size) {
     case "s":
-      return "btn --size-s";
+      return "s";
     case "m":
-      return "btn --size-m";
+      return "m";
     case "l":
-      return "btn --size-l";
+      return "l";
     case "xl":
-      return "btn --size-xl";
+      return "xl";
   }
 }
 
-function Button({ children, OnClick, size = "m" }: Props) {
+function Button({ children, onClick, size = "m" }: Props) {
   return (
-    <button className={checkSize(size)} onClick={OnClick}>
+    <button className={`btn btn--size-${getSize(size)}`} onClick={onClick}>
       {children}
     </button>
   );
