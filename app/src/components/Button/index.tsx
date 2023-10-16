@@ -8,19 +8,20 @@ type Props = {
   size: StyleSizes;
 };
 
-function Button({ children, OnClick, size = "m" }: Props) {
-  function checkSize(size: string) {
-    switch (size) {
-      case "s":
-        return "btn --size-s";
-      case "m":
-        return "btn --size-m";
-      case "l":
-        return "btn --size-l";
-      case "xl":
-        return "btn --size-xl";
-    }
+function checkSize(size: string) {
+  switch (size) {
+    case "s":
+      return "btn --size-s";
+    case "m":
+      return "btn --size-m";
+    case "l":
+      return "btn --size-l";
+    case "xl":
+      return "btn --size-xl";
   }
+}
+
+function Button({ children, OnClick, size = "m" }: Props) {
   return (
     <button className={checkSize(size)} onClick={OnClick}>
       {children}
