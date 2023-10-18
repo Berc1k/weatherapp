@@ -1,0 +1,38 @@
+.nav-icon-8 {
+  width: 15px;
+  height: 30px;
+  margin: 10px 10px;
+  position: relative;
+  cursor: pointer;
+  display: inline-block;
+}
+.nav-icon-8 span {
+  background-color: black;
+  position: absolute;
+  border-radius: 2px;
+  transition: 0.3s cubic-bezier(0.8, 0.5, 0.2, 1.4);
+  width: 100%;
+  height: 2px;
+}
+.nav-icon-8 span:nth-child(1) {
+  top: 0px;
+  left: 0px;
+}
+.nav-icon-8 span:nth-child(2) {
+  top: 6px;
+  left: 0px;
+}
+.nav-icon-8 span:nth-child(3) {
+  top: 12px;
+  left: 0px;
+}
+
+.nav-icon-8.open span:nth-child(1) {
+  top: 6px;
+}
+.nav-icon-8.open span:nth-child(2) {
+  top: 6px;
+}
+.nav-icon-8.open span:nth-child(3) {
+  top: 6px;
+}

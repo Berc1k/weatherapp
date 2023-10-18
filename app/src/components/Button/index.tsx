@@ -1,5 +1,6 @@
 import React from "react";
 import { StyleSizes } from "../../types/styles";
+import getSize from "../utilities";
 
 type Props = {
   children: string;
@@ -7,22 +8,12 @@ type Props = {
   size: StyleSizes;
 };
 
-function getSize(size: StyleSizes) {
-  switch (size) {
-    case "s":
-      return "s";
-    case "m":
-      return "m";
-    case "l":
-      return "l";
-    case "xl":
-      return "xl";
-  }
-}
-
 function Button({ children, onClick, size = "m" }: Props) {
   return (
-    <button className={`btn btn--size-${getSize(size)}`} onClick={onClick}>
+    <button
+      className={`button button--size-${getSize(size)}`}
+      onClick={onClick}
+    >
       {children}
     </button>
   );

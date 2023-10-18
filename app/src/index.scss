@@ -2,6 +2,8 @@
 @import "./styles/colors.scss";
 @import "./components/components.scss";
 
-button {
+button,
+label,
+input {
   font-family: "Open Sans", sans-serif;
 }

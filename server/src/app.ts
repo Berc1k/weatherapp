@@ -4,11 +4,11 @@ import express, { Request, Response } from "express";
 
 const app = express();
 app.use(express.json());
-console.log("elo");
+
 // register route
 
 app.get("/users", function (req: Request, res: Response) {
-  // here we will have logic to return all users
+  console.log("it works?");
 });
 
 app.get("/users/:id", function (req: Request, res: Response) {
