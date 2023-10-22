@@ -2,20 +2,13 @@ import "./index.scss";
 import Button from "./components/Button";
 import Input from "./components/Input";
 import { useState } from "react";
-import NavbarIcon from "./components/NavbarIcon";
+import Navbar from "./components/Navbar";
 
 function App() {
   const [inputVal, setInputVal] = useState("");
   return (
     <div className="app">
-      <Button
-        size="m"
-        onClick={() => {
-          console.log("działa");
-        }}
-      >
-        Załóż konto
-      </Button>
+      <Navbar />
       <Input
         label="Email"
         type="password"
@@ -24,7 +17,14 @@ function App() {
           setInputVal(e.target.value);
         }}
       />
-      <NavbarIcon />
+      <Button
+        size="m"
+        onClick={() => {
+          console.log("działa");
+        }}
+      >
+        Załóż konto
+      </Button>
     </div>
   );
 }
