@@ -1,0 +1,17 @@
+h1 {
+  font-weight: 400;
+  width: 334px;
+  height: 68px;
+  padding: 10px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  padding: 0px 10px;
+}
+
+button {
+  align-self: flex-end;
+}

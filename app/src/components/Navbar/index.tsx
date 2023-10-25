@@ -12,7 +12,7 @@ function Navbar() {
     <>
       <div className="navbar">
         <NavbarIcon isOpen={isOpen} onClick={handleOpen} />
-        <img className="logo" src="https://picsum.photos/200/300" alt="logo" />
+        <img className="logo" src="/logo.png" alt="logo" />
       </div>
 
       <div className={`sidemenu ${isOpen ? "sidemenu--open" : ""}`}>

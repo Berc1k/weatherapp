@@ -8,6 +8,7 @@ type Props = {
   label: string;
   value: string | number;
   placeholder: string;
+  name: string;
   onChange: React.ChangeEventHandler<HTMLInputElement>;
 };
 
@@ -16,6 +17,7 @@ function Input({
   type = "text",
   label = "",
   value = "",
+  name = "",
   placeholder = "text",
   onChange,
 }: Props) {
@@ -25,7 +27,8 @@ function Input({
         {label}
       </label>
       <input
-        id="label"
+        name={name}
+        id={label}
         className={`input ${getSize(size)}`}
         type={type}
         defaultValue={value}

@@ -1,10 +1,11 @@
 .nav-icon-8 {
   width: 15px;
-  height: 30px;
+  height: 15px;
   margin: 10px 10px;
   position: relative;
   cursor: pointer;
-  display: inline-block;
+  display: flex;
+  align-items: center;
 }
 .nav-icon-8 span {
   background-color: black;

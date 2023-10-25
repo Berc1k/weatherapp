@@ -2,11 +2,13 @@
   width: 100%;
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
 .logo {
   width: 24px;
   height: 24px;
+  margin-right: 5px;
 }
 
 .sidemenu {
