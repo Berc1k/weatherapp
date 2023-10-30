@@ -2,30 +2,22 @@
 import "./db/index";
 import express, { Request, Response } from "express";
 
+const cors = require("cors");
 const app = express();
 app.use(express.json());
+app.use(cors());
 
-// register route
+app.post("/user/register", function (req: Request, res: Response) {
+  const { email, password } = req.body;
 
-app.get("/users", function (req: Request, res: Response) {
-  console.log("it works?");
+  const newUser = {
+    email,
+    password,
+  };
+
+  res.status(201).json({ message: "New User is created", user: newUser });
 });
 
-app.get("/users/:id", function (req: Request, res: Response) {
-  // here we will have logic to return user by id
+app.listen(8080, () => {
+  console.log("serwer działa na porcie 8080");
 });
-
-app.post("/users", function (req: Request, res: Response) {
-  // here we will have logic to save a user
-});
-
-app.put("/users/:id", function (req: Request, res: Response) {
-  // here we will have logic to update a user by a given user id
-});
-
-app.delete("/users/:id", function (req: Request, res: Response) {
-  // here we will have logic to delete a user by a given user id
-});
-
-// start express server
-app.listen(8080);

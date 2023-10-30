@@ -13,20 +13,23 @@ function Register() {
       email: inputValues?.email,
       password: inputValues?.password,
     };
-    console.log(data);
-    // const requestOptions = {
-    //   method: "POST",
-    //   headers: { "Content-Type": "application/json" },
-    //   body: JSON.stringify(data),
-    // };
 
-    // try {
-    //   const response = await fetch("https://xyz/form-submit", requestOptions);
-    //   const res = await response.json();
-    //   console.log(res);
-    // } catch (error) {
-    //   console.log(error);
-    // }
+    const requestOptions = {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(data),
+    };
+
+    try {
+      const response = await fetch(
+        "http://127.0.0.1:8080/user/register",
+        requestOptions
+      );
+      const res = await response.json();
+      console.log(res);
+    } catch (error) {
+      console.log(error);
+    }
     setInputValues(undefined);
   }
   const handleInputChange = (e: React.FormEvent<HTMLInputElement>) => {
