@@ -1,0 +1,23 @@
+.btn {
+  border-radius: 6px;
+  background-color: #9ed5e4;
+  color: #454141;
+  border: none;
+  border-radius: 6px;
+  padding: 4px 16px;
+  font-weight: bold;
+  letter-spacing: 0em;
+  text-align: center;
+
+  &--size-m {
+    width: 117px;
+    height: 32px;
+    font-size: 16px;
+  }
+}
+
+.btn:active {
+  opacity: 0.9;
+}
+
+//styleName: Paragraph / IBM Plex Sans Medium;
