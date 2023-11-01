@@ -22,14 +22,14 @@ function Input({
   onChange,
 }: Props) {
   return (
-    <div className="input-wrapper">
-      <label className="label" htmlFor={label}>
+    <div className={`input__wraper input--size-${getSize(size)}`}>
+      <label className="input__label" htmlFor={label}>
         {label}
       </label>
       <input
         name={name}
         id={label}
-        className={`input ${getSize(size)}`}
+        className={"input__field"}
         type={type}
         defaultValue={value}
         placeholder={placeholder}

@@ -6,36 +6,41 @@
   cursor: pointer;
   display: flex;
   align-items: center;
-}
-.nav-icon-8 span {
-  background-color: black;
-  position: absolute;
-  border-radius: 2px;
-  transition: 0.3s cubic-bezier(0.8, 0.5, 0.2, 1.4);
-  height: 2px;
-}
-.nav-icon-8 span:nth-child(1) {
-  width: 75%;
-  top: 0px;
-  left: 0px;
-}
-.nav-icon-8 span:nth-child(2) {
-  width: 100%;
-  top: 6px;
-  left: 0px;
-}
-.nav-icon-8 span:nth-child(3) {
-  width: 75%;
-  top: 12px;
-  left: 0px;
-}
 
-.nav-icon-8.open span:nth-child(1) {
-  top: 6px;
-}
-.nav-icon-8.open span:nth-child(2) {
-  top: 6px;
-}
-.nav-icon-8.open span:nth-child(3) {
-  top: 6px;
+  & span {
+    background-color: black;
+    position: absolute;
+    border-radius: 2px;
+    transition: 0.3s cubic-bezier(0.8, 0.5, 0.2, 1.4);
+    height: 2px;
+
+    &:nth-child(1) {
+      width: 75%;
+      top: 0px;
+      left: 0px;
+    }
+    &:nth-child(2) {
+      width: 100%;
+      top: 6px;
+      left: 0px;
+    }
+    &:nth-child(3) {
+      width: 75%;
+      top: 12px;
+      left: 0px;
+    }
+  }
+  &.open {
+    & span {
+      &:nth-child(1) {
+        top: 6px;
+      }
+      &:nth-child(2) {
+        top: 6px;
+      }
+      &:nth-child(3) {
+        top: 6px;
+      }
+    }
+  }
 }
