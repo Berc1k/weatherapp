@@ -3,34 +3,19 @@ import Button from "../../components/Button";
 import Navbar from "../../components/Navbar";
 import Input from "../../components/Input";
 import "./style.scss";
+import { registerRequest } from "../../requests/user";
 function Register() {
-  const [inputValues, setInputValues] = useState<{ [x: string]: string }>();
+  const [inputValues, setInputValues] = useState<{ [x: string]: string }>({});
 
-  async function handleFormSubmit(e: React.MouseEvent<HTMLElement>) {
+  function handleFormSubmit(e: React.MouseEvent<HTMLElement>) {
     e.preventDefault();
     if (!inputValues?.email || !inputValues?.password) return;
     const data = {
-      email: inputValues?.email,
-      password: inputValues?.password,
+      email: inputValues.email,
+      password: inputValues.password,
     };
-
-    const requestOptions = {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(data),
-    };
-
-    try {
-      const response = await fetch(
-        "http://127.0.0.1:8080/user/register",
-        requestOptions
-      );
-      const res = await response.json();
-      console.log(res);
-    } catch (error) {
-      console.log(error);
-    }
-    setInputValues(undefined);
+    registerRequest(data);
+    setInputValues({});
   }
   const handleInputChange = (e: React.FormEvent<HTMLInputElement>) => {
     const { name, value } = e.currentTarget;
