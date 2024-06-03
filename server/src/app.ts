@@ -7,15 +7,8 @@ const app = express();
 app.use(express.json());
 app.use(cors());
 
-app.post("/user/register", function (req: Request, res: Response) {
-  const { email, password } = req.body;
-
-  const newUser = {
-    email,
-    password,
-  };
-
-  res.status(201).json({ message: "New User is created", user: newUser });
+app.get("/weather/get", function (req: Request, res: Response) {
+  res.status(201).json({ message: "connected to database" });
 });
 
 app.listen(8080, () => {

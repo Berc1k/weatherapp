@@ -1,3 +1,3 @@
 export enum ROUTES {
-  registrationPage = "/register",
+  homePage = "/home",
 }
